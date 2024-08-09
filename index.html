@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>4x4 3D Model</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <script type="module" crossorigin src="./assets/index-eL7pn-aX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BsFcEPIy.css">
+  </head>
+  <body>
+    <div id="preLoadForm" class="preLoadFormClass">
+      <form>
+        <label for="truck-select">Choose a truck:</label>
+        <select name="trucks" id="truck-select">
+          <option value="">--Select Truck--</option>
+          <option value="./models/tacoma2024_edited_draco_ultra.glb">Truck draco encoded fast load</option>
+        </select>
+        <br />
+        <br />
+        <label for="env-select">Choose enviroment:</label>
+        <select name="env" id="env-select">
+          <option value="">--Select Enviroment--</option>
+          <option value="./textures/blouberg_sunrise_2_1k.hdr">Sunrise</option>
+          <option value="./textures/rosendal_plains_1_2k.hdr">Day</option>
+          <option value="./textures/solitude_night_2k.hdr">Night</option>
+          <option value="./textures/victoria_sunset_2k.hdr">Sunset</option>
+        </select>
+        <br />
+        <br />
+     
+        <label for="quality-select">Choose quality:</label>
+        <select name="quality" id="quality-select">
+          <option value="">--Select Quality--</option>
+          <option value="ultra">ultra</option>
+          <option value="high">high</option>
+          <option value="medium">medium</option>
+          <option value="low">low</option>
+        </select>
+        <br />
+        <br />
+        <button id="loadBtn" type="button">GO</button>
+      </form>
+      
+    </div>
+    <div id="myThreeApp" class="threeAppContainer">
+      <div class="container noSelect">
+        <canvas id="three-canvas" class="threeCanvas"></canvas>
+        <div class="color_containter noSelect">
+          <div class="c2d313a"></div>
+          <div class="c1b4585"></div>
+          <div class="c272829"></div>
+          <div class="c696960"></div>
+          <div class="c25486e"></div>
+          <div class="c9fa09e"></div>
+          <div class="ccfd8da"></div>
+          <div class="cab201b"></div>
+          <div class="ccf1e1c"></div>
+        </div>
+      </div>
+      <div class="accessories_container noSelect">
+        <img id="BAR_Display" src="./images/BAR_920_BLACK.png" style="height: 4rem; width: 4rem" />
+
+        <img id="RB_Display" src="./images/RB_4071_BLACK.png" style="height: 4rem; width: 4rem" />
+        <img id="KOY_Display" src="./images/KOY_80_BLACK.png" style="height: 4rem; width: 4rem" />
+      </div>
+      <div id="loaderContainer" class="loaderTop">
+        <div class="logoCirclesBarContainer">
+          <h1 class="logo">4x4</h1>
+          <progress class="progressBar" id="file"></progress>
+          <div class="circles">
+            <!-- <div class="outerCircle"></div> -->
+            <div id="loaderCircle" class="innerCircle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
